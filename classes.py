@@ -1,5 +1,7 @@
 print("\nЗадание 3.1\n")
 
+students = []
+lecturers = []
 
 class Student:
     def __init__(self, name, surname, gender):
@@ -9,6 +11,7 @@ class Student:
         self.finished_courses = []
         self.courses_in_progress = []
         self.grades = {}
+        students.append(self)
 
     def rate_lecturer(self, lecturer, course, grade):
         '''Формируем словарь где ключ - это обучающий курс, а значение - это список оценок. И передаем это в self.grades который находится в def __init__ класса Student'''
@@ -49,6 +52,7 @@ class Lecturer(Mentor):
         self.grades = {}
         self.average = []
         self.courses_attached = []
+        lecturers.append(self)
 
     def get_average_lecturer_rating(self, lecturers_grades):
         for elm in lecturers_grades.values():
