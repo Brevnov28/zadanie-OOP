@@ -78,10 +78,10 @@ class Reviewer(Mentor):
 
 
 first_Lecturer = Lecturer('Fil', 'Wail')
-first_Lecturer.courses_attached += ['Python']
+first_Lecturer.courses_attached += ['Python', "Git"]
 
 second_Lecturer = Lecturer('Bob', 'Mury')
-second_Lecturer.courses_attached += ['Python']
+second_Lecturer.courses_attached += ['Python', "Git"]
 
 first_student = Student('Jon', 'Jonson', 'your_gender')
 first_student.courses_in_progress += ['Python', 'Git']
@@ -99,13 +99,13 @@ second_Reviewer.courses_attached += ['Python']
 
 first_student.rate_lecturer(first_Lecturer, 'Python', 10)
 first_student.rate_lecturer(first_Lecturer, 'Python', 9)
-first_student.rate_lecturer(first_Lecturer, 'Python', 8)
-first_student.rate_lecturer(first_Lecturer, 'Python', 10)
+first_student.rate_lecturer(first_Lecturer, 'Git', 8)
+first_student.rate_lecturer(first_Lecturer, 'Git', 10)
 
 second_student.rate_lecturer(second_Lecturer, 'Python', 10)
 second_student.rate_lecturer(second_Lecturer, 'Python', 7)
-second_student.rate_lecturer(second_Lecturer, 'Python', 8)
-second_student.rate_lecturer(second_Lecturer, 'Python', 9)
+second_student.rate_lecturer(second_Lecturer, 'Git', 8)
+second_student.rate_lecturer(second_Lecturer, 'Git', 9)
 
 # print("Оценки 1-го лектора за лекцию от 1-го студента", first_Lecturer.grades)
 # print("Оценки 2-го лектора за лекцию от 2-го студента", second_Lecturer.grades)
@@ -114,12 +114,12 @@ second_student.rate_lecturer(second_Lecturer, 'Python', 9)
 first_Reviewer.rate_hw(first_student, 'Python', 10)
 first_Reviewer.rate_hw(first_student, 'Python', 9)
 first_Reviewer.rate_hw(first_student, 'Git', 8)
-first_Reviewer.rate_hw(first_student, 'Python', 7)
+first_Reviewer.rate_hw(first_student, 'Git', 7)
 
 second_Reviewer.rate_hw(second_student, 'Python', 10)
 second_Reviewer.rate_hw(second_student, 'Python', 6)
-second_Reviewer.rate_hw(second_student, 'Python', 8)
-second_Reviewer.rate_hw(second_student, 'Python', 5)
+second_Reviewer.rate_hw(second_student, "Git", 8)
+second_Reviewer.rate_hw(second_student, 'Git', 5)
 
 # print("Оценки 1-го студента за Дз от 1-го эксперта", first_student.grades)
 # print("Оценки 2-го студента за Дз от 2-го эксперта", second_student.grades)
